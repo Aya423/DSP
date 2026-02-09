@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="bar">
+        <p>Signal Processing</p>
+        <div>
+
+        <a href="/">home</a>
+        <a href="/info">info</a>
+        </div>
+    </div>
+    <div id = "viewer-box">
+        <div id="viewer"></div>
+        <div id = "buttons">
+                {% csrf_token %}
+                <input type="file" id ="file_input" name = "file">
+                <button onclick="uploadAndPlot()">Plot</button>    
+                <button onclick="startAnimation()">start</button>
+                <button onclick="stopAnimation()">stop</button>
+                
+        </div>
+        
+    </div>
+    
+
+    
+
+</body>
+<script src="https://cdn.plot.ly/plotly-3.3.0.min.js" charset="utf-8"></script>
+<script src = "../static/javascript.js"></script>
+</html>
